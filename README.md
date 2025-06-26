@@ -52,6 +52,8 @@ PACIENTE
 
 `Funcionalidad 9 `:Pruebas de las funcionalidades de la API mediante herramientas de simulación de solicitudes.
 
+![solicitudes](https://github.com/user-attachments/assets/2edf1c9f-1047-4802-a91d-8977641fea8b)
+
 
 ![cadastro medico insomnia](https://github.com/user-attachments/assets/0639ce50-a22c-4b37-a579-6a3832523bd5)
 
