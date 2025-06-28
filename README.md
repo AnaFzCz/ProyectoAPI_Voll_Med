@@ -8,7 +8,7 @@
 - [Descripción del proyecto](#descripción-del-proyecto)
 - [Funcionalidad y Demostración de la aplicación](#funcionalidad-y-demostración-de-la-aplicación)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
-- [Developer del Projecto](#developer-del-projecto)
+- [Developer del Proyecto](#developer-del-proyecto)
 
   
 
@@ -87,7 +87,7 @@ Insomnia – Herramienta para realizar pruebas y simular solicitudes HTTP a la A
 
 
 
-## Developer del Projecto
+## Developer del Proyecto
 
 
 | [<img src="https://avatars.githubusercontent.com/u/169064334?s=400&u=e750ebc6759c09750f78a6f491ac78069a292719&v=4" width=115><br><sub>Ana Fernandez</sub>](https://github.com/AnaFzCz) |    |
