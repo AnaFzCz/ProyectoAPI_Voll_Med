@@ -33,6 +33,7 @@ PACIENTE
 ## Funcionalidad y Demostración de la aplicación
 
 
+#Funcionalidades iniciales
 
 `Funcionalidad 1 `: Desarrollo de una API REST para gestión de datos médicos.
 
@@ -51,6 +52,20 @@ PACIENTE
 `Funcionalidad 8 `:Enfoque exclusivo en el Back-end (sin interfaz gráfica ni front-end).
 
 `Funcionalidad 9 `:Pruebas de las funcionalidades de la API mediante herramientas de simulación de solicitudes.
+
+#Funcionalidades Actualizadas
+
+`Funcionalidad 10 `:Padronizar os retornos dos controllers para garantir respostas uniformes e claras em toda a API.
+
+`Funcionalidad 11 `:Utilizar os códigos de status HTTP de forma adequada, conforme o resultado de cada operação.
+
+`Funcionalidad 12 `:Adicionar o módulo Spring Security ao projeto para reforçar a segurança da aplicação.
+
+`Funcionalidad 13 `:Implementar um mecanismo de autenticação na API, garantindo que apenas usuários válidos tenham acesso aos recursos.
+
+`Funcionalidad 14 `:Realizar o controle de acesso dentro da API, restringindo rotas de acordo com o perfil do usuário.
+
+`Funcionalidad 15 `:Utilizar JSON Web Token (JWT) para gerenciar a autenticação e a autorização de forma segura e escalável.
 
 ![solicitudes](https://github.com/user-attachments/assets/2edf1c9f-1047-4802-a91d-8977641fea8b)
 
