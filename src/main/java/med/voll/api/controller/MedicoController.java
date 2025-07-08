@@ -18,7 +18,7 @@ public class MedicoController {
     @Autowired
     private MedicoRepository repository;
 
-    // código 201-> debe devolver también el cuerpo con la respuesta de los datos del nuevo recurso y cabecera de protocolo http
+    // código 201-> debe devolver también el cuerpo con la respuesta de los datos del nuevo recurso y cabecera de protocolo http(location)
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroMedico dados, UriComponentsBuilder uriBuilder) {
@@ -32,6 +32,7 @@ public class MedicoController {
 
     @GetMapping
     public ResponseEntity<Page<DadosListagemMedico>> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable pageable) {
+
         var page = repository.findAllByAtivoTrue(pageable).map(DadosListagemMedico::new);
         return ResponseEntity.ok(page);
     }
@@ -46,7 +47,7 @@ public class MedicoController {
 
     }
 
-    // metodo apropiado en enviar el código 204
+    // metodo apropiado Buenas prácticas enviar el código 204
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity exhuir(@PathVariable Long id) {
@@ -54,6 +55,8 @@ public class MedicoController {
         medico.excluir();
         return ResponseEntity.noContent().build();
     }
+
+    // código 200 enviando OK
 
     @GetMapping("/{id}")
     public ResponseEntity detalhar(@PathVariable Long id) {
