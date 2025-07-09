@@ -1,6 +1,7 @@
 package med.voll.api.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
+import med.voll.api.domain.ValidacaoException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -25,6 +26,13 @@ public class TratadorDeErros {
 
         return ResponseEntity.badRequest().body(erros.stream().map(DadosErroValidacao::new).toList());
     }
+
+    @ExceptionHandler(ValidacaoException.class)
+    public ResponseEntity tratarErrorRegraDeNegocio(ValidacaoException ex) {
+
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
 
     //DTO creado para obtener los datos de errores 400 con los campos que requerimos
     public record DadosErroValidacao(String campo, String mensagem) {

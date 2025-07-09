@@ -1,5 +1,6 @@
 package med.voll.api.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import med.voll.api.domain.paciente.*;
@@ -12,7 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
-@RequestMapping("pacientes")
+@RequestMapping("/pacientes")
+@SecurityRequirement(name = "bearer-key")
 public class PacienteController {
     @Autowired
     private PacienteRepository repository1;
@@ -24,7 +26,7 @@ public class PacienteController {
         repository1.save(paciente);
         // System.out.println(dados);
 
-        var uri = uriBuilder.path("/medicos/{id}").buildAndExpand(paciente.getId()).toUri();
+        var uri = uriBuilder.path("/pacientes/{id}").buildAndExpand(paciente.getId()).toUri();
         return ResponseEntity.created(uri).body(new DadosDetalhamentoPaciente(paciente));
     }
 
